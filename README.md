@@ -1,1 +1,1 @@
-# payment_gateway integration website which accpets donation.
+# payment_gateway integration website.
