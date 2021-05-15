@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Portal</title>
+    <link rel="stylesheet" href="homePagestyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <section>
+      <input type="checkbox" id="check">
+      <header>
+        </div>
+        <h2><a href="#" class="logo"><img src="https://www.thesparksfoundationsingapore.org/images/logo_small.png" width="32%" height="32%"></a></h2>
+        <div class="navigation">
+          <a href="#">HOME</a>
+          <a href="services.html">ABOUT US</a>
+          
+         
+          
+        </div>
+        <label for="check">
+        <i class="fas fa-bars menu-btn"></i>
+        <i class="fas fa-times close-btn"></i>
+        </label>
+      </header>
+      <div class="content">
+        <div class="info">
+          <h2>FEEL THE PEACE OF GIVING <br><span>IF YOU HAVE, DONATE</span></h2>
+          <p>Giving is not just about giving a donation, its about making a difference.<br> Giving is the greatest act of grace. In this pandemic era some people are<br>not even getting a meal for a time. Please donate, as your small <br> contribution can get them meal, can help them in getting vaccinated.<br> Click on the donate button to help the poor to raise their head and you will feel privlaged.Your small contribute can add a day in someone's life.</p>
+          <a onclick="onButtonClick()" class="info-btn">DONATE</a>
+        </div>
+      </div>
+      <div class="media-icons">
+        
+        <a href="https://www.linkedin.com/in/kunal-roy-704427198/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/KunalRo84448358?s=08"><i class="fab fa-twitter"></i></a>
+        
+      </div>
+    </section>
+     <script src="https://js.instamojo.com/v1/checkout.js"></script>
+    <script>
+        /* Start client-defined Callback Handler Functions */
+      function onOpenHandler () {
+        alert('Payments Modal is Opened');
+      }
+
+      function onCloseHandler () {
+        alert('Payments Modal is Closed');
+      }
+
+      function onPaymentSuccessHandler (response) {
+        alert('Payment Success');
+        console.log('Payment Success Response', response);
+      }
+
+      function onPaymentFailureHandler (response) {
+        alert('Payment Failure');
+        console.log('Payment Failure Response', response);
+      }
+      /* End client-defined Callback Handler Functions */
+
+      /* Configuring Handlers */
+      Instamojo.configure({
+        handlers: {
+          onOpen: onOpenHandler,
+          onClose: onCloseHandler,
+          onSuccess: onPaymentSuccessHandler,
+          onFailure: onPaymentFailureHandler
+        }
+      });
+      function onButtonClick() {
+        Instamojo.open('https://test.instamojo.com/@kunalroy552000');
+      }
+    // Toggle between hiding and showing blog replies/comments
+    document.getElementById("myBtn").click();
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    function likeFunction(x) {
+      x.style.fontWeight = "bold";
+      x.innerHTML = "&#10003; Liked";
+    }
+    </script>
+
+  </body>
+</html>
